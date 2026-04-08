@@ -2,7 +2,7 @@
 
 > Drop the filler. Keep the facts.
 
-A skill for Claude Code, Codex, Cursor, and other coding agents that switches responses to structured SITREP-style output — terse, accurate, scannable.
+A skill for Claude Code, Codex, Cursor, and other coding agents that switches responses to structured SITREP-style output... terse, accurate, scannable.
 
 Based on the observation that brevity constraints reduce token usage without losing technical substance. Unlike other implementations of similar ideas, SITREP mode keeps full grammar and structured fields which is a much better fit for professional engineering contexts.
 
