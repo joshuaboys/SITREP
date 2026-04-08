@@ -1,4 +1,4 @@
-# agent-sitrep
+# SITREP
 
 > Drop the filler. Keep the facts.
 
