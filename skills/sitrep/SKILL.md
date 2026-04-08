@@ -131,15 +131,7 @@ Regardless of mode:
 
 ## Install
 
-**Claude Code:**
-```bash
-npx skills add joshuaboys/agent-sitrep
-```
-
-**Codex:**
-```bash
-npx skills add joshuaboys/agent-sitrep -a codex
-```
+Copy `skills/sitrep/SKILL.md` into your agent's skills directory.
 
 **Manual (any agent):**
 Copy `skills/sitrep/SKILL.md` into your agent's skills directory.

@@ -22,19 +22,13 @@ Stop with: `/normal`
 
 ## Install
 
-```bash
-npx skills add joshuaboys/agent-sitrep
-```
+Copy `skills/sitrep/SKILL.md` into your agent's skills directory.
 
-For a specific agent:
+**Claude Code:** `.claude/skills/sitrep/SKILL.md`
+**Codex:** `.codex/skills/sitrep/SKILL.md`
+**Cursor:** `.cursor/skills/sitrep/SKILL.md`
 
-```bash
-npx skills add joshuaboys/agent-sitrep -a codex
-npx skills add joshuaboys/agent-sitrep -a cursor
-npx skills add joshuaboys/agent-sitrep -a claude-code
-```
-
-Or manually copy `skills/sitrep/SKILL.md` into your agent's skills directory.
+Or wherever your agent loads skills from.
 
 ---
 
