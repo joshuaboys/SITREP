@@ -1,23 +1,27 @@
 ---
 name: sitrep
-description: Use when asked to respond in terse, structured SITREP style — brief operator-style outputs that drop filler and hedging while keeping full technical accuracy. Triggers on /sitrep, /brief, /flash, or natural language like "sitrep mode", "keep it short", "operator mode".
+description: Terse, structured output style — drops filler and hedging while keeping technical accuracy. Modes brief/sitrep/flash/normal. Triggers on /sitrep [mode] or phrases like "keep it short", "brief mode", "flash mode", "operator mode", "stop sitrep".
+argument-hint: "[brief|sitrep|flash|normal]"
 ---
 
 # SITREP Mode
 
 Drop the filler. Keep the facts.
 
-## Modes
+## Activation
 
-Activate with slash command, natural language, or inline request. Mode sticks until you change it or session ends.
+Requested mode: `$ARGUMENTS`
 
-| Mode | Trigger | Style |
-|---|---|---|
-| **Brief** | `/brief` or "brief mode" | Prose minus filler and hedging. Full grammar, no pleasantries. |
-| **SITREP** | `/sitrep` or "sitrep mode" | Structured fields. SITUATION / ACTION / STATUS or equivalent. |
-| **Flash** | `/flash` or "flash mode" | One line per topic. Maximum compression. No connective tissue. |
+If the argument is empty, activate **SITREP** mode (the default). Otherwise activate the mode named in the argument. If the user later asks for a mode in natural language ("brief mode", "keep it short", "flash mode", "stop sitrep", "normal mode"), switch immediately.
 
-Stop with: `/normal`, "normal mode", or "stop sitrep".
+Once activated, the mode applies to every subsequent response until the user changes it or stops it.
+
+| Mode | Command | Natural language | Style |
+|---|---|---|---|
+| **Brief** | `/sitrep brief` | "brief mode", "keep it short" | Prose minus filler and hedging. Full grammar, no pleasantries. |
+| **SITREP** (default) | `/sitrep` | "sitrep mode", "operator mode" | Structured fields. SITUATION / ACTION / STATUS or equivalent. |
+| **Flash** | `/sitrep flash` | "flash mode" | One line per topic. Maximum compression. No connective tissue. |
+| **Normal** | `/sitrep normal` | "normal mode", "stop sitrep" | Resume default prose style — skill is inert. |
 
 ---
 
@@ -127,11 +131,3 @@ Regardless of mode:
 | Code | Normal | Normal | Normal |
 | Best for | General chat | Status updates, task reports | Dense technical summaries |
 
----
-
-## Install
-
-Copy `skills/sitrep/SKILL.md` into your agent's skills directory.
-
-**Manual (any agent):**
-Copy `skills/sitrep/SKILL.md` into your agent's skills directory.
